@@ -1,0 +1,24 @@
+<html ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-init="timeOfDay = 14">
+    <h1>This is Angular !!</h1>
+    <div ng-controller="mainCtrl">
+        <p ng-if="timeOfDay < 12">Good Morning</p>
+        <p ng-if="timeOfDay > 12 && timeOfDay < 17">Good Afternoon</p>
+        <p ng-if="timeOfDay > 17">Good Evening</p>
+
+        <p>Hour of day is: <span ng-bind="timeOfDay + 2"></span></p>
+
+        <p>Hour of day is: {{timeOfDay}}</p>
+        
+    </div>
+
+</body>
+
+</html>
