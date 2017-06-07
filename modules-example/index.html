@@ -1,0 +1,22 @@
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <script src="angular.js"></script>
+        <link rel="stylesheet" href="http://mbenford.github.io/ngTagsInput/css/ng-tags-input.min.css" />
+        <script src="http://mbenford.github.io/ngTagsInput/js/ng-tags-input.min.js"></script>
+        <script src="app.js"></script>
+        <script src="helloApp.js"></script>
+    </head>
+    <body>
+        <div ng-controller="helloCtrl as ctrl">
+            {{ctrl.helloMessage}}
+        </div>
+
+        <div ng-controller="MainCtrl as mainctrl">
+            <tags-input ng-model="mainctrl.tags"></tags-input>
+            <p>Model: {{mainctrl.tags}}</p>
+        </div>
+
+
+    </body>
+</html>

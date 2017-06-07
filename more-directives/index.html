@@ -13,10 +13,23 @@
             </p>
 
             <div ng-repeat="obj in ctrl.myList" ng-show="ctrl.checked">
-                <ul>
-                    <li>Age : {{obj.age}}</li>
-                    <li>Name : {{obj.name}}</li>
-                </ul>
+
+                <div ng-if="$even">
+                    <ul style="color: red">
+                        <li>Element {{$index + 1}} </li>
+                        <li>Name : {{obj.name}}</li>
+                        <li>Age : {{obj.age}}</li>
+                        
+                    </ul>
+                </div>
+                <div ng-if="$odd">
+                    <ul style="color: blue">
+                        <li>Element {{$index + 1}} </li>
+                        <li>Name : {{obj.name}}</li>
+                        <li>Age : {{obj.age}}</li>
+                        
+                    </ul>
+                </div>
                 
             </div>
         
